@@ -37,3 +37,9 @@ jobs:
 
       - name: Terraform Apply
         run: terraform apply -auto-approve
+
+      - name: Pause 2min to verify bucket creation
+        run: sleep 120
+
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
